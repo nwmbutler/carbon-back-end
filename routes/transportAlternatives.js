@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var axios = require ('axios');
 var busCalculate = require('../modules/busCalculator')
+var trainCalculate = require('../modules/trainCalculator')
 
 router.post('/', function(req, res) {
     var journey_data_out = req.body.posted_data
@@ -20,8 +21,13 @@ axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
     // console.log(response)
     var google_data_in = response.data.rows[0].elements[0]
     // console.log(google_data_in)
-    var emissions = busCalculate(google_data_in.distance.value)
-    res.send({ distance: emissions});
+    if (req.body.posted_data.transit_mode == 'bus') {
+      var emissions = busCalculate(google_data_in.distance.value)
+      res.send({ distance: emissions});
+    } else {
+      var emissions = trainCalculate(google_data_in.distance.value)
+      res.send({ distance: emissions});
+    }
   });
 });
 
