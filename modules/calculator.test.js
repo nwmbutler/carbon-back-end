@@ -9,3 +9,8 @@ test('returns 0 emissions for walking ', () => {
   var emissions = 0;
   expect(calculate(100, 'walking')).toBe(emissions);
 });
+
+test('returns 0 emissions for bicycling ', () => {
+  var emissions = 0;
+  expect(calculate(100, 'bicycling')).toBe(emissions);
+});
