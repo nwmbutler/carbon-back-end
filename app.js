@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var testAPIRouter = require("./routes/testAPI");
 var app = express();
+var dotenv = require('dotenv');
+dotenv.config();
 // view engine setup
 app.use(cors());
 app.set('views', path.join(__dirname, 'views'));
@@ -35,5 +37,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
+console.log(`${process.env.PORT}`);
 module.exports = app;
