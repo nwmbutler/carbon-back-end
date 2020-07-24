@@ -1,5 +1,5 @@
 function calculate(distance, mode) {
-  if (mode == 'car') {
+  if (mode == 'driving') {
     return distance * (122.1 / 1000);
   } else {
     return 0;
