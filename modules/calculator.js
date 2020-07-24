@@ -1,4 +1,8 @@
 function calculate(distance, mode) {
-    return distance * (122.1 / 1000)
+  if (mode == 'car') {
+    return distance * (122.1 / 1000);
+  } else {
+    return 0;
   }
-  module.exports = calculate;
+}
+module.exports = calculate;

@@ -7,5 +7,5 @@ test('returns emissions for a car', () => {
 
 test('returns 0 emissions for walking ', () => {
   var emissions = 0;
-  expect(calculate(100, 'car')).toBe(0);
+  expect(calculate(100, 'walking')).toBe(emissions);
 });
