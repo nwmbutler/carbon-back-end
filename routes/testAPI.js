@@ -12,10 +12,10 @@ axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
     origins: journey_data_out.origin,
     destinations: journey_data_out.destination,
     mode: journey_data_out.mode,
-    key: ''}})
+    key: `${process.env.API_Key}`}})
 
   .then(function (response) {
-    // console.log(response)
+    console.log(response)
     var google_data_in = response.data.rows[0].elements[0]
     // console.log(distance)
     res.send({ distance: google_data_in.distance.value * 122.1 / 1000});
