@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var testAPIRouter = require("./routes/testAPI");
+var transportAlternativeRouter = require("./routes/transportAlternatives");
 var app = express();
 // view engine setup
 app.use(cors());
@@ -18,6 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client/build')));
 app.use("/testAPI", testAPIRouter);
+app.use("/transportAlternative", transportAlternativeRouter);
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
