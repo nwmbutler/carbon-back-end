@@ -13,11 +13,9 @@ axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
     destinations: journey_data_out.destination,
     mode: journey_data_out.mode,
     key: `${process.env.API_KEY}`}})
-   
-
 
   .then(function (response) {
-    // console.log(response)
+    console.log(response)
     var google_data_in = response.data.rows[0].elements[0]
     console.log(google_data_in)
     var emissions = carCalculate(google_data_in.distance.value, req.body.posted_data.mode)
