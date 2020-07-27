@@ -16,7 +16,7 @@ axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
     mode: 'transit',
     transit_mode: journey_data_out.transit_mode,
 
-    key: ''}})
+    key: `${process.env.API_Key}`}})
 
 
   .then(function (response) {
