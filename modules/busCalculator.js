@@ -1,6 +1,8 @@
 function busCalculate(distance) {
-    return distance * (50 / 1000);
+    var raw_emission = distance * (27.79 / 1000);
+    var emission = Math.round(raw_emission)
+    return `${emission}`
   }
 module.exports = busCalculate;
 
-// 50g per passanger  km
+// 27.79 g CO2e/passenger.km
