@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var testAPIRouter = require("./routes/testAPI");
 var transportAlternativeRouter = require("./routes/transportAlternatives");
 var app = express();
+var dotenv = require('dotenv');
+dotenv.config();
 // view engine setup
 app.use(cors());
 
