@@ -5,4 +5,4 @@ function busCalculate(distance) {
   }
 module.exports = busCalculate;
 
-// 27.79 g CO2e/passenger.km
+// 27.79 g CO2e/passenger.km for Business travel - land, Bus: Coach
