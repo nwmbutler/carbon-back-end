@@ -3,7 +3,7 @@ const e = require("express");
 function carCalculate(distance, mode) {
   if (mode == 'driving') {
     var raw_emission = distance * (0.19228 / 1000);
-    emission = Math.round(raw_emission)
+    var emission = Math.round(raw_emission)
     return `${emission}`
   } else {
     return 0;
