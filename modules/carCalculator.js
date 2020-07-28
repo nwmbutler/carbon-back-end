@@ -4,7 +4,7 @@ function carCalculate(distance, mode) {
     var emission = raw_emission.toFixed(2)
     return `${emission} kg CO2e`
   } else {
-    return 0;
+    return `0 kg CO2e`;
   }
 }
 module.exports = carCalculate;
