@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var axios = require ('axios');
-var carCalculate = require ('../modules/carCalculator')
+var directToCalculator = require ('../modules/calculatorDirector')
 router.post('/', function(req, res) {
     var journey_data_out = req.body.posted_data
     // console.log(journey_data_out)
@@ -15,10 +15,9 @@ axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
     key: `${process.env.API_KEY}`}})
 
   .then(function (response) {
-    console.log(response)
     var google_data_in = response.data.rows[0].elements[0]
-    console.log(google_data_in)
-    var emissions = carCalculate(google_data_in.distance.value, req.body.posted_data.mode)
+
+    emissions = directToCalculator(journey_data_out.mode, google_data_in.distance.value)
     res.send({ distance: emissions});
   });
 });
