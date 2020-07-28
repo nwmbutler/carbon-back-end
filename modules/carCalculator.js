@@ -1,7 +1,7 @@
 function carCalculate(distance, mode) {
   if (mode == 'driving') {
     var raw_emission = distance * (0.19228 / 1000);
-    var emission = Math.round(raw_emission)
+    var emission = raw_emission.toFixed(2)
     return `${emission} kg CO2e`
   } else {
     return 0;
