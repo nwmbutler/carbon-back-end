@@ -26,7 +26,7 @@ axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
         var emissions = carCalculate(google_data_in.distance.value, req.body.posted_data.mode);
     } else if (req.body.posted_data.mode == 'bus') {
         var emissions = busCalculate(google_data_in.distance.value)
-    } else if (req.body.posted_data.mode == 'bus') {
+    } else if (req.body.posted_data.mode == 'train') {
         var emissions = trainCalculate(google_data_in.distance.value)
     } else {
         var emissions = planeCalculate(google_data_in.distance.value)
