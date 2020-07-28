@@ -17,9 +17,7 @@ axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
   .then(function (response) {
     var google_data_in = response.data.rows[0].elements[0]
 
-    console.log(response)
-
-    emissions = directToCalculator(req.body.posted_data.mode, google_data_in.distance.value)
+    emissions = directToCalculator(journey_data_out.mode, google_data_in.distance.value)
     res.send({ distance: emissions});
   });
 });
