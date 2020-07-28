@@ -1,8 +1,12 @@
 function carCalculate(distance, mode) {
   if (mode == 'driving') {
-    return distance * (122.1 / 1000);
+    var raw_emission = distance * (0.19228 / 1000);
+    var emission = raw_emission.toFixed(2)
+    return `${emission} kg CO2e`
   } else {
-    return 0;
+    return `0 kg CO2e`;
   }
 }
 module.exports = carCalculate;
+
+// 0.19228 kg CO2e /km Passenger Vehicles, Cars(by size), Medium car, petrol
