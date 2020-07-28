@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1595929658049" clover="3.2.0">
-  <project timestamp="1595929658049" name="All files">
-    <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2" elements="14" coveredelements="14" complexity="0" loc="10" ncloc="10" packages="1" files="2" classes="2"/>
-    <file name="busCalculator.js" path="/Users/nickbutler/Projects/wk11/carbon-back-end/modules/busCalculator.js">
+<coverage generated="1595930205136" clover="3.2.0">
+  <project timestamp="1595930205136" name="All files">
+    <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3" elements="19" coveredelements="19" complexity="0" loc="14" ncloc="14" packages="1" files="3" classes="3"/>
+    <file name="busCalculator.js" path="/Users/student/Projects/Week-11/carbon-back-end/modules/busCalculator.js">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="2" count="2" type="stmt"/>
       <line num="3" count="2" type="stmt"/>
       <line num="4" count="2" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
     </file>
-    <file name="carCalculator.js" path="/Users/nickbutler/Projects/wk11/carbon-back-end/modules/carCalculator.js">
+    <file name="carCalculator.js" path="/Users/student/Projects/Week-11/carbon-back-end/modules/carCalculator.js">
       <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <line num="2" count="3" type="cond" truecount="2" falsecount="0"/>
       <line num="3" count="1" type="stmt"/>
@@ -17,6 +17,13 @@
       <line num="5" count="1" type="stmt"/>
       <line num="7" count="2" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
+    </file>
+    <file name="trainCalculator.js" path="/Users/student/Projects/Week-11/carbon-back-end/modules/trainCalculator.js">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="2" count="2" type="stmt"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
