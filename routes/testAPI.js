@@ -16,7 +16,15 @@ axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
 
   .then(function (response) {
     var google_data_in = response.data.rows[0].elements[0]
-    var emissions = carCalculate(google_data_in.distance.value, req.body.posted_data.mode)
+
+    switch (req.body.posted_data.mode) {
+      case 'driving':
+        var emissions = carCalculate(google_data_in.distance.value, req.body.posted_data.mode);
+      case 'bus':
+        var emissions = busCalculate(google_data_in.distance.value)
+      case 'train':
+        var emissions = trainCalculate(google_data_in.distance.value)
+    }
     res.send({ distance: emissions});
   });
 });
