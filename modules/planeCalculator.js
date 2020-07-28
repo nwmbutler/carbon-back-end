@@ -4,3 +4,5 @@ function planeCalculate(distance) {
     return `${emission} kg CO2e`
   }
 module.exports = planeCalculate;
+
+// 0.25493 kg CO2e / passenger.km Business travel - air, Flights, DOmestic, Average Passenger, with Radioactive Forcing
