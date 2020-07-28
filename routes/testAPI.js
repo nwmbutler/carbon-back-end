@@ -4,6 +4,7 @@ var axios = require ('axios');
 var carCalculate = require ('../modules/carCalculator')
 var busCalculate = require ('../modules/busCalculator')
 var trainCalculate = require ('../modules/trainCalculator')
+var planeCalculate = require ('../modules/planeCalculator')
 router.post('/', function(req, res) {
     var journey_data_out = req.body.posted_data
     // console.log(journey_data_out)
@@ -25,9 +26,11 @@ axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
         var emissions = carCalculate(google_data_in.distance.value, req.body.posted_data.mode);
     } else if (req.body.posted_data.mode == 'bus') {
         var emissions = busCalculate(google_data_in.distance.value)
-    } else {
+    } else if (req.body.posted_data.mode == 'bus') {
         var emissions = trainCalculate(google_data_in.distance.value)
-    }
+    } else {
+        var emissions = planeCalculate(google_data_in.distance.value)
+    } 
     res.send({ distance: emissions});
   });
 });
