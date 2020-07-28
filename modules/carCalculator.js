@@ -1,5 +1,3 @@
-const e = require("express");
-
 function carCalculate(distance, mode) {
   if (mode == 'driving') {
     var raw_emission = distance * (0.19228 / 1000);
