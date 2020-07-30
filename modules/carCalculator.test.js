@@ -1,7 +1,7 @@
 const carCalculate = require('./carCalculator');
 
 test('returns emissions for a car', () => {
-  var emissions = "0.19 kg CO2e which is equivalent to 3 kettle boils! ";
+  var emissions = "0.19 kg CO2e which is equivalent to 13 kettle boils! ";
   expect(carCalculate(1000, 'driving')).toBe(emissions);
 });
 
