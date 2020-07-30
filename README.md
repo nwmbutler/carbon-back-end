@@ -3,15 +3,15 @@
 
 # Small Steps
 
-* [Live on Heroku](https://carbon-front-end.herokuapp.com/)
+* [Live on Heroku](https://small-steps2020.herokuapp.com/)
 
 ## Developers
 
 - [Nick Butler](https://github.com/nwmbutler)
-- [Nikita Douglas](https://https://github.com/NikitaDouglas)
+- [Nikita Douglas](https://github.com/NikitaDouglas)
 - [Rich Ewin](https://github.com/RichEwin)
-- [Jack Perrin](https://https://github.com/perrinjack)
-- [Minsi Yang](https://https://https://github.com/minsiyang)
+- [Jack Perrin](https://github.com/perrinjack)
+- [Minsi Yang](https://github.com/minsiyang)
 
 ## The Mission
 
